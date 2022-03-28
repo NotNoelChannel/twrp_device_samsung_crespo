@@ -1,0 +1,12 @@
+# mount point	fstype		device
+/sdcard		vfat		/dev/block/platform/s3c-sdhci.0/by-name/media       flags=display="Micro SDcard";storage;wipeingui;removable
+/system		ext4		/dev/block/platform/s3c-sdhci.0/by-name/system      flags=display="System";backup=1;canbewiped;wipeingui
+/cache		yaffs2		cache                                               flags=display="Cache";canbewiped;wipeingui;wipeduringfactoryreset
+/data		ext4		/dev/block/platform/s3c-sdhci.0/by-name/userdata    flags=display="Data";length=-16384;backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/misc 		mtd 		misc                                                flags=display="Miscellanous";backup=1
+/boot		mtd		boot                                                    flags=display="Boot";backup=1;flashimg=1
+/recovery	mtd		recovery                                                flags=display="Recovery";flashimg=1
+/bootloader	mtd		bootloader                                              flags=display="Bootloader";backup=1
+/radio		mtd		radio 													flags=display="Radio";backup=1                             
+
+/usb-otg vfat /dev/block/sda1 /dev/block/sda flags=display="USB OTG";storage;wipeingui;removable           
